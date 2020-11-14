@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryLightColor"
+    tools:context=".NewMascota">
+
+    <Button
+        android:id="@+id/addMascota"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="182dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="112dp"
+        android:backgroundTint="@color/primaryColor"
+        android:fontFamily="@font/productsansregular"
+        android:onClick="addMascota"
+        android:text="Añadir Mascota"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintCircleRadius="10px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="354dp"
+        android:layout_height="520dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="28dp"
+        android:minHeight="200dp"
+        app:cardBackgroundColor="@color/primaryColor"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/cardview_dark_background">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/avatarPerro"
+                    android:layout_width="126dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="112dp"
+                    android:background="@drawable/border_image"
+                    android:cropToPadding="true"
+                    android:onClick="setImage"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/avatarperrete" />
+
+                <ImageView
+                    android:id="@+id/addImg"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="82dp"
+                    android:layout_marginEnd="111dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_add" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nombre"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="222dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="38dp"
+                    android:background="@android:color/transparent"
+                    app:errorEnabled="true"
+                    app:layout_constraintCircleRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/avatarPerro">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nombreTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/productsansregular"
+                        android:hint="Nombre"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/raza"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="222dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="67dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="67dp"
+                    android:background="@android:color/transparent"
+                    app:errorEnabled="true"
+                    app:layout_constraintCircleRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nombre">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/razaTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/productsansregular"
+                        android:hint="Raza"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fNac"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="222dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="67dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="67dp"
+                    android:background="@android:color/transparent"
+                    app:errorEnabled="true"
+                    app:layout_constraintCircleRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/raza">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fNacText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:fontFamily="@font/productsansregular"
+                        android:hint="Fecha de Nacimiento"
+                        android:onClick="selectDateNac"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/proxVac"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="222dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="67dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="67dp"
+                    android:background="@android:color/transparent"
+                    app:errorEnabled="true"
+                    app:layout_constraintCircleRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fNac">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/proxVacText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:fontFamily="@font/productsansregular"
+                        android:hint="Próxima Vacuna"
+                        android:onClick="selectDateVac"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/peso"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="222dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="67dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="67dp"
+                    android:background="@android:color/transparent"
+                    app:errorEnabled="true"
+                    app:layout_constraintCircleRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/proxVac">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pesoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/productsansregular"
+                        android:hint="Peso"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/chip"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="222dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="67dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="67dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@android:color/transparent"
+                    app:errorEnabled="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintCircleRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/proxVac">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/chipText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/productsansregular"
+                        android:hint="Chip"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
